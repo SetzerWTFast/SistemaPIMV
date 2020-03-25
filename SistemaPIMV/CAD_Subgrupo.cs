@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SistemaPIMV.Sistema
+namespace SistemaPIMV
 {
-    public partial class FRM_Menu : Form
+    public partial class CAD_Subgrupo : Form
     {
-        public FRM_Menu()
+        public CAD_Subgrupo()
         {
             InitializeComponent();
         }

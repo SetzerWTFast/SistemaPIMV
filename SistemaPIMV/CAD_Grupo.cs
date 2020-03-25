@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SistemaPIMV
 {
-    public partial class FRM_Login : Form
+    public partial class CAD_Grupo : Form
     {
-        public FRM_Login()
+        public CAD_Grupo()
         {
             InitializeComponent();
         }
