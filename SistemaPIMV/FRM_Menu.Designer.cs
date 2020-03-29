@@ -44,12 +44,12 @@
             this.mudarSenhaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.criarUsuárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.suporteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.TrocarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.tstOperador = new System.Windows.Forms.ToolStripStatusLabel();
             this.tstData = new System.Windows.Forms.ToolStripStatusLabel();
             this.tstHora = new System.Windows.Forms.ToolStripStatusLabel();
             this.timeAtualizar = new System.Windows.Forms.Timer(this.components);
+            this.clientesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.mstpMenu.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -109,7 +109,8 @@
             // mstpConsulta
             // 
             this.mstpConsulta.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.produtoToolStripMenuItem});
+            this.produtoToolStripMenuItem,
+            this.clientesToolStripMenuItem1});
             this.mstpConsulta.Name = "mstpConsulta";
             this.mstpConsulta.Size = new System.Drawing.Size(66, 20);
             this.mstpConsulta.Text = "Consulta";
@@ -117,8 +118,9 @@
             // produtoToolStripMenuItem
             // 
             this.produtoToolStripMenuItem.Name = "produtoToolStripMenuItem";
-            this.produtoToolStripMenuItem.Size = new System.Drawing.Size(117, 22);
+            this.produtoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.produtoToolStripMenuItem.Text = "Produto";
+            this.produtoToolStripMenuItem.Click += new System.EventHandler(this.produtoToolStripMenuItem_Click);
             // 
             // mstpAgenda
             // 
@@ -133,14 +135,14 @@
             this.alocarProdutosToolStripMenuItem.Name = "alocarProdutosToolStripMenuItem";
             this.alocarProdutosToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.alocarProdutosToolStripMenuItem.Text = "Alocar Produtos";
+            this.alocarProdutosToolStripMenuItem.Click += new System.EventHandler(this.alocarProdutosToolStripMenuItem_Click);
             // 
             // mstpFerramentas
             // 
             this.mstpFerramentas.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mudarSenhaToolStripMenuItem,
             this.criarUsuárioToolStripMenuItem,
-            this.suporteToolStripMenuItem,
-            this.TrocarToolStripMenuItem});
+            this.suporteToolStripMenuItem});
             this.mstpFerramentas.Name = "mstpFerramentas";
             this.mstpFerramentas.Size = new System.Drawing.Size(84, 20);
             this.mstpFerramentas.Text = "Ferramentas";
@@ -148,30 +150,27 @@
             // mudarSenhaToolStripMenuItem
             // 
             this.mudarSenhaToolStripMenuItem.Name = "mudarSenhaToolStripMenuItem";
-            this.mudarSenhaToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.mudarSenhaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.mudarSenhaToolStripMenuItem.Text = "Mudar Senha";
+            this.mudarSenhaToolStripMenuItem.Click += new System.EventHandler(this.mudarSenhaToolStripMenuItem_Click);
             // 
             // criarUsuárioToolStripMenuItem
             // 
             this.criarUsuárioToolStripMenuItem.Name = "criarUsuárioToolStripMenuItem";
-            this.criarUsuárioToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.criarUsuárioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.criarUsuárioToolStripMenuItem.Text = "Criar Usuário";
+            this.criarUsuárioToolStripMenuItem.Click += new System.EventHandler(this.criarUsuárioToolStripMenuItem_Click);
             // 
             // suporteToolStripMenuItem
             // 
             this.suporteToolStripMenuItem.Name = "suporteToolStripMenuItem";
-            this.suporteToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
+            this.suporteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.suporteToolStripMenuItem.Text = "Suporte";
             this.suporteToolStripMenuItem.Click += new System.EventHandler(this.suporteToolStripMenuItem_Click);
             // 
-            // TrocarToolStripMenuItem
-            // 
-            this.TrocarToolStripMenuItem.Name = "TrocarToolStripMenuItem";
-            this.TrocarToolStripMenuItem.Size = new System.Drawing.Size(149, 22);
-            this.TrocarToolStripMenuItem.Text = "Trocar Usuário";
-            // 
             // statusStrip1
             // 
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tstOperador,
             this.tstData,
@@ -205,6 +204,13 @@
             this.timeAtualizar.Enabled = true;
             this.timeAtualizar.Interval = 1;
             this.timeAtualizar.Tick += new System.EventHandler(this.timeAtualizar_Tick);
+            // 
+            // clientesToolStripMenuItem1
+            // 
+            this.clientesToolStripMenuItem1.Name = "clientesToolStripMenuItem1";
+            this.clientesToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.clientesToolStripMenuItem1.Text = "Clientes";
+            this.clientesToolStripMenuItem1.Click += new System.EventHandler(this.clientesToolStripMenuItem1_Click);
             // 
             // FRM_Menu
             // 
@@ -246,7 +252,6 @@
         private System.Windows.Forms.ToolStripMenuItem mudarSenhaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem criarUsuárioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem suporteToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem TrocarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem grupoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem subGrupoToolStripMenuItem;
         private System.Windows.Forms.StatusStrip statusStrip1;
@@ -254,5 +259,6 @@
         private System.Windows.Forms.ToolStripStatusLabel tstData;
         private System.Windows.Forms.ToolStripStatusLabel tstHora;
         private System.Windows.Forms.Timer timeAtualizar;
+        private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem1;
     }
 }

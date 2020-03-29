@@ -17,29 +17,27 @@ namespace SistemaPIMV.Sistema
             InitializeComponent();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void CAD_Clientes_Load(object sender, EventArgs e)
         {
-
+            txtData.Text = DateTime.Now.ToString("dd/MM/yyyy");
+            cmbTipo.Text = "OUTROS";
         }
 
-        private void tabPage2_Click(object sender, EventArgs e)
+        private void txtCep_KeyUp(object sender, KeyEventArgs e)
         {
+            if (e.KeyCode == Keys.Enter)
+            {
+                string xml = "http://cep.republicavirtual.com.br/web_cep.php?cep=@cep&formato=xml".Replace("@cep", txtCep.Text);
 
-        }
+                DataSet ds = new DataSet();
+                ds.ReadXml(xml);
 
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label20_Click(object sender, EventArgs e)
-        {
-
+                txtLogradouro.Text = ds.Tables[0].Rows[0][5].ToString().ToUpper();
+                txtEndereco.Text = ds.Tables[0].Rows[0]["Logradouro"].ToString().ToUpper();
+                txtBairro.Text = ds.Tables[0].Rows[0]["Bairro"].ToString().ToUpper();
+                txtCidade.Text = ds.Tables[0].Rows[0]["Cidade"].ToString().ToUpper();
+                txtUf.Text = ds.Tables[0].Rows[0]["UF"].ToString().ToUpper();
+            }
         }
     }
 }

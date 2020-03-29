@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CAD_Grupo));
             this.label1 = new System.Windows.Forms.Label();
             this.btnAdicionar = new System.Windows.Forms.Button();
             this.txtGrupo = new System.Windows.Forms.TextBox();
@@ -46,11 +47,14 @@
             // 
             // btnAdicionar
             // 
-            this.btnAdicionar.Location = new System.Drawing.Point(429, 29);
+            this.btnAdicionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdicionar.Image = ((System.Drawing.Image)(resources.GetObject("btnAdicionar.Image")));
+            this.btnAdicionar.Location = new System.Drawing.Point(428, 17);
             this.btnAdicionar.Name = "btnAdicionar";
-            this.btnAdicionar.Size = new System.Drawing.Size(75, 23);
+            this.btnAdicionar.Size = new System.Drawing.Size(106, 47);
             this.btnAdicionar.TabIndex = 6;
             this.btnAdicionar.Text = "Adicionar";
+            this.btnAdicionar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAdicionar.UseVisualStyleBackColor = true;
             // 
             // txtGrupo
@@ -63,22 +67,22 @@
             // dgvGrupo
             // 
             this.dgvGrupo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvGrupo.Location = new System.Drawing.Point(12, 57);
+            this.dgvGrupo.Location = new System.Drawing.Point(12, 70);
             this.dgvGrupo.Name = "dgvGrupo";
-            this.dgvGrupo.Size = new System.Drawing.Size(491, 381);
+            this.dgvGrupo.Size = new System.Drawing.Size(522, 368);
             this.dgvGrupo.TabIndex = 4;
             // 
             // CAD_Grupo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(515, 450);
+            this.ClientSize = new System.Drawing.Size(543, 450);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnAdicionar);
             this.Controls.Add(this.txtGrupo);
             this.Controls.Add(this.dgvGrupo);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(531, 489);
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(531, 489);
             this.Name = "CAD_Grupo";

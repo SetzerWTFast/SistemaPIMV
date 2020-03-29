@@ -91,5 +91,64 @@ namespace SistemaPIMV.Sistema
             Application.Exit();
         }
 
+        private void alocarProdutosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FRM_AlugarProduto Alugar = new FRM_AlugarProduto();
+            if (Application.OpenForms.OfType<FRM_AlugarProduto>().Count() > 0)
+            {
+            }
+            else
+            {
+                Alugar.Show();
+            }
+        }
+
+        private void mudarSenhaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FRM_MudarSenha MudarSenha = new FRM_MudarSenha();
+            if (Application.OpenForms.OfType<FRM_MudarSenha>().Count() > 0)
+            {
+            }
+            else
+            {
+                MudarSenha.Show();
+            }
+        }
+
+        private void criarUsuárioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FRM_CriarUsuario Criar = new FRM_CriarUsuario();
+            if (Application.OpenForms.OfType<FRM_CriarUsuario>().Count() > 0)
+            {
+            }
+            else
+            {
+                Criar.Show();
+            }
+        }
+
+        private void produtoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CONS_Produtos Produtos = new CONS_Produtos();
+            if (Application.OpenForms.OfType<CONS_Produtos>().Count() > 0)
+            {
+            }
+            else
+            {
+                Produtos.Show();
+            }
+        }
+
+        private void clientesToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            CONS_Clientes Clientes = new CONS_Clientes();
+            if (Application.OpenForms.OfType<CONS_Clientes>().Count() > 0)
+            {
+            }
+            else
+            {
+                Clientes.Show();
+            }
+        }
     }
 }

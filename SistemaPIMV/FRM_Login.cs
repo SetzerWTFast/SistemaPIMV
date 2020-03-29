@@ -19,21 +19,34 @@ namespace SistemaPIMV
 
         private void FRM_Login_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("Este sistema está em fase de desenvolvimento, versão alpha", "Bem-Vindo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             txtUsuario.BackColor = this.BackColor;
             txtSenha.BackColor = this.BackColor;
+            txtUsuario.Focus();
         }
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
-            Sistema.FRM_Menu Menu = new Sistema.FRM_Menu();
-            Menu.Show();
-            this.Visible = false;
+            if (txtUsuario.Text=="admin" && txtSenha.Text=="admin")
+            {
+                Sistema.FRM_Menu Menu = new Sistema.FRM_Menu();
+                Menu.Show();
+                this.Visible = false;
+            }
+            else
+            {
+                MessageBox.Show("Usuário ou Senha incorretos, tente novamente.", "Erro ao Entrar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtUsuario.Text = "";
+                txtSenha.Text = "";
+                txtUsuario.Focus();
+            }
+
+            
         }
 
         private void btnSair_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
+
     }
 }
