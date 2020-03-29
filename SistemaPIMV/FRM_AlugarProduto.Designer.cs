@@ -149,20 +149,26 @@
             // 
             // btnAlugar
             // 
+            this.btnAlugar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAlugar.Image = ((System.Drawing.Image)(resources.GetObject("btnAlugar.Image")));
             this.btnAlugar.Location = new System.Drawing.Point(532, 371);
             this.btnAlugar.Name = "btnAlugar";
-            this.btnAlugar.Size = new System.Drawing.Size(119, 41);
+            this.btnAlugar.Size = new System.Drawing.Size(119, 47);
             this.btnAlugar.TabIndex = 6;
-            this.btnAlugar.Text = "Alugar";
+            this.btnAlugar.Text = "   Alugar";
+            this.btnAlugar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAlugar.UseVisualStyleBackColor = true;
             // 
             // btnLiberar
             // 
+            this.btnLiberar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLiberar.Image = ((System.Drawing.Image)(resources.GetObject("btnLiberar.Image")));
             this.btnLiberar.Location = new System.Drawing.Point(407, 371);
             this.btnLiberar.Name = "btnLiberar";
-            this.btnLiberar.Size = new System.Drawing.Size(119, 41);
+            this.btnLiberar.Size = new System.Drawing.Size(119, 47);
             this.btnLiberar.TabIndex = 7;
-            this.btnLiberar.Text = "Liberar";
+            this.btnLiberar.Text = "   Liberar";
+            this.btnLiberar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLiberar.UseVisualStyleBackColor = true;
             // 
             // gpDados

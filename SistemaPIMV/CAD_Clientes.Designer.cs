@@ -72,7 +72,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtCpf = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.btnAdicionar = new System.Windows.Forms.Button();
             this.label21 = new System.Windows.Forms.Label();
@@ -188,7 +188,7 @@
             this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Controls.Add(this.textBox5);
             this.tabPage1.Controls.Add(this.label4);
-            this.tabPage1.Controls.Add(this.textBox4);
+            this.tabPage1.Controls.Add(this.txtCpf);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -511,12 +511,12 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "CPF";
             // 
-            // textBox4
+            // txtCpf
             // 
-            this.textBox4.Location = new System.Drawing.Point(16, 33);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(192, 20);
-            this.textBox4.TabIndex = 6;
+            this.txtCpf.Location = new System.Drawing.Point(16, 33);
+            this.txtCpf.Name = "txtCpf";
+            this.txtCpf.Size = new System.Drawing.Size(192, 20);
+            this.txtCpf.TabIndex = 6;
             // 
             // tabPage2
             // 
@@ -733,7 +733,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtCpf;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox textBox19;

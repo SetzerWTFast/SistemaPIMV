@@ -23,11 +23,16 @@ namespace SistemaPIMV.Sistema
             cmbTipo.Text = "OUTROS";
         }
 
+      
         private void txtCep_KeyUp(object sender, KeyEventArgs e)
         {
+
             if (e.KeyCode == Keys.Enter)
             {
+
                 string xml = "http://cep.republicavirtual.com.br/web_cep.php?cep=@cep&formato=xml".Replace("@cep", txtCep.Text);
+
+
 
                 DataSet ds = new DataSet();
                 ds.ReadXml(xml);
@@ -37,6 +42,7 @@ namespace SistemaPIMV.Sistema
                 txtBairro.Text = ds.Tables[0].Rows[0]["Bairro"].ToString().ToUpper();
                 txtCidade.Text = ds.Tables[0].Rows[0]["Cidade"].ToString().ToUpper();
                 txtUf.Text = ds.Tables[0].Rows[0]["UF"].ToString().ToUpper();
+
             }
         }
     }

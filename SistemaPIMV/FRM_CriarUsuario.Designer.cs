@@ -88,18 +88,21 @@
             // 
             // btnCriarUsuario
             // 
-            this.btnCriarUsuario.Location = new System.Drawing.Point(15, 131);
+            this.btnCriarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCriarUsuario.Image = ((System.Drawing.Image)(resources.GetObject("btnCriarUsuario.Image")));
+            this.btnCriarUsuario.Location = new System.Drawing.Point(15, 133);
             this.btnCriarUsuario.Name = "btnCriarUsuario";
-            this.btnCriarUsuario.Size = new System.Drawing.Size(141, 23);
+            this.btnCriarUsuario.Size = new System.Drawing.Size(141, 47);
             this.btnCriarUsuario.TabIndex = 6;
             this.btnCriarUsuario.Text = "Criar Usuário";
+            this.btnCriarUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCriarUsuario.UseVisualStyleBackColor = true;
             // 
             // FRM_CriarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(168, 170);
+            this.ClientSize = new System.Drawing.Size(168, 192);
             this.Controls.Add(this.btnCriarUsuario);
             this.Controls.Add(this.txtRSenha);
             this.Controls.Add(this.label2);
