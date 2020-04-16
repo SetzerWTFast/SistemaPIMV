@@ -16,5 +16,12 @@ namespace SistemaPIMV
         {
             InitializeComponent();
         }
+
+        private void btnCriarUsuario_Click(object sender, EventArgs e)
+        {
+            CadastrarUsuario cadastro = new CadastrarUsuario(txtUsuario.Text, txtSenha.Text);
+            MessageBox.Show(cadastro.mensagem, "Cadastro de Usuário", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+        }
     }
 }

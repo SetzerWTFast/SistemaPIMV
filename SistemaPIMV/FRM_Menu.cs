@@ -51,28 +51,9 @@ namespace SistemaPIMV.Sistema
             }
         }
 
-        private void grupoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            CAD_Grupo Grupo = new CAD_Grupo();
-            if (Application.OpenForms.OfType<CAD_Grupo>().Count() > 0)
-            {
-            }
-            else
-            {
-                Grupo.Show();
-            }
-        }
-
         private void subGrupoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CAD_Subgrupo SubGrupo = new CAD_Subgrupo();
-            if (Application.OpenForms.OfType<CAD_Subgrupo>().Count() > 0)
-            {
-            }
-            else
-            {
-                SubGrupo.Show();
-            }
+
         }
 
         private void FRM_Menu_Load(object sender, EventArgs e)

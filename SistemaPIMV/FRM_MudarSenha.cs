@@ -19,7 +19,14 @@ namespace SistemaPIMV
 
         private void FRM_MudarSenha_Load(object sender, EventArgs e)
         {
-            cmbUsuario.Text = "MASTER";
+            // TODO: esta linha de código carrega dados na tabela 'usuarios.tbl_Login'. Você pode movê-la ou removê-la conforme necessário.
+            this.tbl_LoginTableAdapter.Fill(this.usuarios.tbl_Login);
+        }
+
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+            AlterarSenha alterar = new AlterarSenha(cmbUsuario.Text, txtNSenha.Text);
+            MessageBox.Show(alterar.mensagem, "Alterar Senha", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

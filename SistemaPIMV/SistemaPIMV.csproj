@@ -51,17 +51,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cadastro.cs" />
     <Compile Include="CAD_Clientes.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CAD_Clientes.Designer.cs">
       <DependentUpon>CAD_Clientes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="CAD_Grupo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CAD_Grupo.Designer.cs">
-      <DependentUpon>CAD_Grupo.cs</DependentUpon>
     </Compile>
     <Compile Include="CAD_Produtos.cs">
       <SubType>Form</SubType>
@@ -69,12 +64,7 @@
     <Compile Include="CAD_Produtos.Designer.cs">
       <DependentUpon>CAD_Produtos.cs</DependentUpon>
     </Compile>
-    <Compile Include="CAD_Subgrupo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CAD_Subgrupo.Designer.cs">
-      <DependentUpon>CAD_Subgrupo.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Conexao.cs" />
     <Compile Include="Connected Services\WSCorreios\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -122,6 +112,26 @@
     <Compile Include="FRM_Login.Designer.cs">
       <DependentUpon>FRM_Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="PIMVDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PIMVDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PIMVDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PIMVDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PIMVDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PIMVDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="PIMVDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PIMVDataSet3.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="FRM_Menu.cs">
@@ -130,17 +140,16 @@
     <Compile Include="FRM_Menu.Designer.cs">
       <DependentUpon>FRM_Menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Usuarios.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Usuarios.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CAD_Clientes.resx">
       <DependentUpon>CAD_Clientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CAD_Grupo.resx">
-      <DependentUpon>CAD_Grupo.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="CAD_Produtos.resx">
       <DependentUpon>CAD_Produtos.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CAD_Subgrupo.resx">
-      <DependentUpon>CAD_Subgrupo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CONS_Clientes.resx">
       <DependentUpon>CONS_Clientes.cs</DependentUpon>
@@ -343,6 +352,50 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="PIMVDataSet.xsc">
+      <DependentUpon>PIMVDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PIMVDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PIMVDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PIMVDataSet.xss">
+      <DependentUpon>PIMVDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PIMVDataSet1.xsc">
+      <DependentUpon>PIMVDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="PIMVDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PIMVDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PIMVDataSet1.xss">
+      <DependentUpon>PIMVDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="PIMVDataSet2.xsc">
+      <DependentUpon>PIMVDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="PIMVDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PIMVDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PIMVDataSet2.xss">
+      <DependentUpon>PIMVDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="PIMVDataSet3.xsc">
+      <DependentUpon>PIMVDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="PIMVDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PIMVDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PIMVDataSet3.xss">
+      <DependentUpon>PIMVDataSet3.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -352,6 +405,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Usuarios.xsc">
+      <DependentUpon>Usuarios.xsd</DependentUpon>
+    </None>
+    <None Include="Usuarios.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Usuarios.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Usuarios.xss">
+      <DependentUpon>Usuarios.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

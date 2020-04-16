@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_MudarSenha));
             this.lblUsuario = new System.Windows.Forms.Label();
             this.cmbUsuario = new System.Windows.Forms.ComboBox();
@@ -36,6 +37,11 @@
             this.lblRSenha = new System.Windows.Forms.Label();
             this.txtRSenha = new System.Windows.Forms.TextBox();
             this.btnSalvar = new System.Windows.Forms.Button();
+            this.usuarios = new SistemaPIMV.Usuarios();
+            this.tblLoginBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tbl_LoginTableAdapter = new SistemaPIMV.UsuariosTableAdapters.tbl_LoginTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.usuarios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblLoginBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // lblUsuario
@@ -49,6 +55,8 @@
             // 
             // cmbUsuario
             // 
+            this.cmbUsuario.DataSource = this.tblLoginBindingSource;
+            this.cmbUsuario.DisplayMember = "login";
             this.cmbUsuario.FormattingEnabled = true;
             this.cmbUsuario.Location = new System.Drawing.Point(10, 23);
             this.cmbUsuario.Name = "cmbUsuario";
@@ -98,6 +106,21 @@
             this.btnSalvar.Text = "   Salvar";
             this.btnSalvar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
+            // 
+            // usuarios
+            // 
+            this.usuarios.DataSetName = "Usuarios";
+            this.usuarios.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tblLoginBindingSource
+            // 
+            this.tblLoginBindingSource.DataMember = "tbl_Login";
+            this.tblLoginBindingSource.DataSource = this.usuarios;
+            // 
+            // tbl_LoginTableAdapter
+            // 
+            this.tbl_LoginTableAdapter.ClearBeforeFill = true;
             // 
             // FRM_MudarSenha
             // 
@@ -118,6 +141,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mudar Senha";
             this.Load += new System.EventHandler(this.FRM_MudarSenha_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.usuarios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblLoginBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -132,5 +157,8 @@
         private System.Windows.Forms.Label lblRSenha;
         private System.Windows.Forms.TextBox txtRSenha;
         private System.Windows.Forms.Button btnSalvar;
+        private Usuarios usuarios;
+        private System.Windows.Forms.BindingSource tblLoginBindingSource;
+        private UsuariosTableAdapters.tbl_LoginTableAdapter tbl_LoginTableAdapter;
     }
 }

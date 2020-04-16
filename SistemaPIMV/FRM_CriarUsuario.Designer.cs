@@ -97,6 +97,7 @@
             this.btnCriarUsuario.Text = "Criar Usuário";
             this.btnCriarUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCriarUsuario.UseVisualStyleBackColor = true;
+            this.btnCriarUsuario.Click += new System.EventHandler(this.btnCriarUsuario_Click);
             // 
             // FRM_CriarUsuario
             // 

@@ -50,6 +50,7 @@
             this.lblLocal = new System.Windows.Forms.Label();
             this.lblDataDevolucao = new System.Windows.Forms.Label();
             this.lblDataRetira = new System.Windows.Forms.Label();
+            this.btnLimpar = new System.Windows.Forms.Button();
             this.gpCliente.SuspendLayout();
             this.gpProduto.SuspendLayout();
             this.gpDados.SuspendLayout();
@@ -61,6 +62,7 @@
             this.txtCodigoCliente.Name = "txtCodigoCliente";
             this.txtCodigoCliente.Size = new System.Drawing.Size(100, 20);
             this.txtCodigoCliente.TabIndex = 0;
+            this.txtCodigoCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigoCliente_KeyPress);
             // 
             // txtNomeCliente
             // 
@@ -146,6 +148,7 @@
             this.txtCodigoProduto.Name = "txtCodigoProduto";
             this.txtCodigoProduto.Size = new System.Drawing.Size(100, 20);
             this.txtCodigoProduto.TabIndex = 0;
+            this.txtCodigoProduto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCodigoProduto_KeyPress);
             // 
             // btnAlugar
             // 
@@ -158,6 +161,7 @@
             this.btnAlugar.Text = "   Alugar";
             this.btnAlugar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAlugar.UseVisualStyleBackColor = true;
+            this.btnAlugar.Click += new System.EventHandler(this.btnAlugar_Click);
             // 
             // btnLiberar
             // 
@@ -254,11 +258,24 @@
             this.lblDataRetira.TabIndex = 3;
             this.lblDataRetira.Text = "Data de Retira";
             // 
+            // btnLimpar
+            // 
+            this.btnLimpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpar.Image = ((System.Drawing.Image)(resources.GetObject("btnLimpar.Image")));
+            this.btnLimpar.Location = new System.Drawing.Point(285, 371);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(116, 47);
+            this.btnLimpar.TabIndex = 9;
+            this.btnLimpar.Text = "    Limpar";
+            this.btnLimpar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnLimpar.UseVisualStyleBackColor = true;
+            // 
             // FRM_AlugarProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(662, 421);
+            this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.gpDados);
             this.Controls.Add(this.btnLiberar);
             this.Controls.Add(this.btnAlugar);
@@ -271,7 +288,7 @@
             this.MinimumSize = new System.Drawing.Size(678, 460);
             this.Name = "FRM_AlugarProduto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Alocar Produto";
+            this.Text = "Alugar Produto";
             this.gpCliente.ResumeLayout(false);
             this.gpCliente.PerformLayout();
             this.gpProduto.ResumeLayout(false);
@@ -305,5 +322,6 @@
         private System.Windows.Forms.Label lblLocal;
         private System.Windows.Forms.Label lblDataDevolucao;
         private System.Windows.Forms.Label lblDataRetira;
+        private System.Windows.Forms.Button btnLimpar;
     }
 }

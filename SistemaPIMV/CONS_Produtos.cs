@@ -16,5 +16,16 @@ namespace SistemaPIMV.Sistema
         {
             InitializeComponent();
         }
+
+        private void CONS_Produtos_Load(object sender, EventArgs e)
+        {
+            // TODO: esta linha de código carrega dados na tabela 'pIMVDataSet3.tbl_Produtos'. Você pode movê-la ou removê-la conforme necessário.
+            this.tbl_ProdutosTableAdapter.Fill(this.pIMVDataSet3.tbl_Produtos);
+            // TODO: esta linha de código carrega dados na tabela 'pIMVDataSet3.tbl_Produtos'. Você pode movê-la ou removê-la conforme necessário.
+            this.tbl_ProdutosTableAdapter.Fill(this.pIMVDataSet3.tbl_Produtos);
+            // TODO: esta linha de código carrega dados na tabela 'pIMVDataSet3.tbl_Produtos'. Você pode movê-la ou removê-la conforme necessário.
+            this.tbl_ProdutosTableAdapter.Fill(this.pIMVDataSet3.tbl_Produtos);
+
+        }
     }
 }

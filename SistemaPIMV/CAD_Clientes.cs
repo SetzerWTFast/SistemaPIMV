@@ -45,5 +45,43 @@ namespace SistemaPIMV.Sistema
 
             }
         }
+
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            DateTime dataHoje = DateTime.Today;
+       
+            CadastroCliente cad = new CadastroCliente(txtNome.Text, txtCpf.Text, txtRg.Text, txtApelido.Text, txtZona.Text, txtObservacao.Text, cmbTipo.Text, txtCep.Text, txtLogradouro.Text, txtEndereco.Text, txtNumero.Text, txtComplemento.Text, txtBairro.Text, txtCidade.Text, txtUf.Text, txtPonto.Text, txtDdd.Text, txtTelefone.Text, txtContato.Text);
+            MessageBox.Show(cad.mensagem, "Cadastro de Clientes", MessageBoxButtons.OK, MessageBoxIcon.Information );
+            LimparCampos();
+        }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            LimparCampos();
+        }
+
+        public void LimparCampos()
+        {
+            txtNome.Clear();
+            txtCpf.Clear();
+            txtRg.Clear();
+            txtApelido.Clear();
+            txtZona.Clear();
+            txtObservacao.Clear();
+            cmbTipo.Text = "";
+            txtCep.Clear();
+            txtLogradouro.Clear();
+            txtEndereco.Clear();
+            txtNumero.Clear();
+            txtNumero.Clear();
+            txtComplemento.Clear();
+            txtBairro.Clear();
+            txtCidade.Clear();
+            txtUf.Clear();
+            txtPonto.Clear();
+            txtDdd.Clear();
+            txtTelefone.Clear();
+            txtContato.Clear();
+        }
     }
 }
